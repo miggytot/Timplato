@@ -1,69 +1,6 @@
-.hero-section {
-    background: #304C89;
-    width: 100vw;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0;
-}
-
-.heroGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    max-width: 1200px;
-    min-height: 400px;
-    align-items: center;
-    gap: 32px;
-}
-
-.heroImageCol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.heroImage {
-    max-width: 90%;
-    max-height: 1920px;
-    object-fit: contain;
-    border-radius: 18px;
-}
-
-.heroTextCol {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 0 24px;
-}
-
-.heroTitle {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 18px;
-    text-align: left;
-}
-
-.heroSubtitle {
-    font-size: 1.3rem;
-    color: #f6f6f6;
-    text-align: left;
-    margin-bottom: 0;
-}
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-* {
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
-}
-
 .nav {
-    background: linear-gradient(to bottom, rgb(34, 57, 107) 0%, rgba(23, 22, 128, 0) 100%);
+    /* background: linear-gradient(to bottom, rgb(68, 105, 185) 0%, rgba(23, 22, 128, 0) 100%); */
+    background-color: #304C89;
     color: white;
     padding: 20px 0;
     width: 100vw;
@@ -73,6 +10,30 @@
     z-index: 1000;
     margin: 0;
     box-sizing: border-box;
+}
+
+.subnavbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E2A47;
+    color: white;
+    margin: 0 10px 0 10px;
+    padding: 20px 30px;
+    width: 100vw;
+    position: fixed;
+    top: 110px;
+    left: 0;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.subnavbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: 0 18px;
+    font-size: 1.08rem;
 }
 
 .logo {
@@ -108,35 +69,6 @@
     color: #ff4081;
 }
 
-.hero-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-/* .heroHeader {
-    background-image: url('loginBanner.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    min-height: 100vh;
-    margin-top: 0;
-    margin-bottom: 18px;
-    padding-top: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 1;
-} */
-
-/* User dropdown style */
 .dropdown-user {
   position: relative;
 }
