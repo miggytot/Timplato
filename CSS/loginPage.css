@@ -6,7 +6,7 @@
 }
 
 .nav {
-    background: linear-gradient(to bottom, rgba(51,51,51,0.70) 0%, rgba(51,51,51,0) 100%);
+    background: linear-gradient(to bottom, rgba(51, 51, 51, 0.70) 0%, rgba(51, 51, 51, 0) 100%);
     color: white;
     padding: 20px 0;
     width: 100vw;
@@ -61,7 +61,7 @@
 }
 
 .heroHeader {
-    background-image: url('./Assets/timplatoLoginBanner.png');
+    background-image: url('../Assets/timplatoLoginBanner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -82,10 +82,10 @@
 .loginContainer {
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
     padding: 36px 32px 28px 32px;
     min-width: 320px;
-    max-width: 350px;
+    max-width: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -127,6 +127,7 @@
     background: #f7f7fa;
     transition: border 0.2s;
 }
+
 .formInput:focus {
     border: 1.5px solid #7c5fe6;
     outline: none;
@@ -144,6 +145,29 @@
     cursor: pointer;
     transition: background 0.2s;
 }
+
+/* Google button style */
+.googleButton {
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #bdbdbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* space between icon and text */
+}
+
+.googleButton:hover {
+    background: #f1f1f1;
+}
+
+/* Google icon inside button */
+.googleIcon {
+    width: 20px;
+    height: 20px;
+}
+
 .formButton:hover {
     background: #5a3bb3;
 }
