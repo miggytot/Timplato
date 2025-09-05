@@ -70,3 +70,33 @@ if (searchToggle && searchBar) {
         }
     });
 }
+
+// Subnavbar logic
+
+    // Mega menu dropdown logic for All Products and categories (hover only)
+    function showMegaMenu(id) {
+        document.getElementById(id).style.display = 'flex';
+        // Show default products for All Products
+        if(id === 'allProductsMega') {
+            selectSubcat('cookware', 'products-list-all');
+        }
+    }
+    function hideMegaMenu(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+    // Subcategory selection logic (hover)
+    function selectSubcat(subcat, listId) {
+        const products = {
+            cookware: ["Non-Stick Frying Pan", "Stainless Steel Pot", "Wok"],
+            tools: ["Chef's Knife", "Spatula", "Mixing Bowl"],
+            tableware: ["Dinner Plate", "Wine Glass", "Serving Spoon"]
+        };
+        const list = document.getElementById(listId);
+        list.innerHTML = '';
+        products[subcat].forEach(prod => {
+            const a = document.createElement('a');
+            a.href = '#';
+            a.textContent = prod;
+            list.appendChild(a);
+        });
+    }

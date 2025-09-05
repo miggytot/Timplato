@@ -61,7 +61,7 @@
 }
 
 .heroHeader {
-    background-image: url('./Assets/timplatoLoginBanner.png');
+    background-image: url('../Assets/timplatoLoginBanner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -128,7 +128,7 @@
     transition: border 0.2s;
 }
 .formInput:focus {
-    border: 1.5px solid #7c5fe6;
+    border: 1.5px solid #648DE5;
     outline: none;
 }
 
@@ -137,7 +137,7 @@
     padding: 10px 0;
     border-radius: 6px;
     border: none;
-    background: #7c5fe6;
+    background: #648DE5;
     color: #fff;
     font-size: 1.1rem;
     font-weight: 600;
@@ -145,7 +145,7 @@
     transition: background 0.2s;
 }
 .formButton:hover {
-    background: #5a3bb3;
+    background: #304C89;
 }
 
 .forgotPasswordLink {
@@ -162,7 +162,7 @@
 }
 
 .signupLink {
-    color: #7c5fe6;
+    color: #648DE5;
     text-decoration: none;
 }
 

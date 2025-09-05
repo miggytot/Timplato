@@ -28,16 +28,58 @@
             </li>
         </ul>
         <div class="subnavbar">
-            <a href="#">All Products</a>
-            <a href="#">Dineware</a>
-            <a href="#">Cookware</a>
-            <a href="#">Utensils</a>
-            <a href="#">Appliances</a>
-            <a href="#">Kitchen Storage</a>
-            <a href="#">Baking Supplies</a>
-            <a href="#">Cutting & Chopping</a>
-            <a href="#">Outdoor & Grilling</a>
-            <a href="#">Special Offers</a>
+            <a href="#" class="mega-btn">All Products</a>
+            <div class="mega-dropdown" onmouseover="showMegaMenu('cookwareMega')" onmouseout="hideMegaMenu('cookwareMega')">
+                <a href="#" class="mega-btn">Cookware ▼</a>
+                <div class="mega-menu" id="cookwareMega" style="display:none;">
+                    <div class="mega-col">
+                        <div class="mega-title">Subcategories</div>
+                        <a href="#">Pots & Pans</a>
+                        <a href="#">Cookware Sets</a>
+                        <a href="#">Specialty Cookware</a>
+                    </div>
+                    <div class="mega-col">
+                        <div class="mega-title">Products</div>
+                        <a href="#">Non-Stick Frying Pan</a>
+                        <a href="#">Stainless Steel Pot</a>
+                        <a href="#">Wok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-dropdown" onmouseover="showMegaMenu('toolsMega')" onmouseout="hideMegaMenu('toolsMega')">
+                <a href="#" class="mega-btn">Kitchen Tools & Utensils ▼</a>
+                <div class="mega-menu" id="toolsMega" style="display:none;">
+                    <div class="mega-col">
+                        <div class="mega-title">Subcategories</div>
+                        <a href="#">Cutting Tools</a>
+                        <a href="#">Cooking Utensils</a>
+                        <a href="#">Preparation Tools</a>
+                    </div>
+                    <div class="mega-col">
+                        <div class="mega-title">Products</div>
+                        <a href="#">Chef's Knife</a>
+                        <a href="#">Spatula</a>
+                        <a href="#">Mixing Bowl</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-dropdown" onmouseover="showMegaMenu('tablewareMega')" onmouseout="hideMegaMenu('tablewareMega')">
+                <a href="#" class="mega-btn">Tableware & Serving ▼</a>
+                <div class="mega-menu" id="tablewareMega" style="display:none;">
+                    <div class="mega-col">
+                        <div class="mega-title">Subcategories</div>
+                        <a href="#">Plates & Bowls</a>
+                        <a href="#">Drinkware</a>
+                        <a href="#">Serving Tools</a>
+                    </div>
+                    <div class="mega-col">
+                        <div class="mega-title">Products</div>
+                        <a href="#">Dinner Plate</a>
+                        <a href="#">Wine Glass</a>
+                        <a href="#">Serving Spoon</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -69,25 +111,37 @@
     <img src="../Products/NonStickFryingPan–28cm.png" alt="1 Set Dineware"></a>
         <div class="product-title">1 Set Dineware</div>
         <div class="product-price">₱4,950.00</div>
-        <button class="buy-btn">Buy Now</button>
+        <div class="button-row">
+          <button class="buy-btn">Buy Now</button>
+          <button class="addToWishlist-btn"><i data-lucide="shopping-cart"></i></button>
+        </div>
     </div>
     <div class="product-card">
         <div class="product-image-placeholder"></div>
         <div class="product-title">Product Name</div>
         <div class="product-price">₱4,950.00</div>
-        <button class="buy-btn">Buy Now</button>
+        <div class="button-row">
+          <button class="buy-btn">Buy Now</button>
+          <button class="addToWishlist-btn"><i data-lucide="shopping-cart"></i></button>
+        </div>
     </div>
     <div class="product-card">
         <div class="product-image-placeholder"></div>
         <div class="product-title">Product Name</div>
         <div class="product-price">₱4,950.00</div>
-        <button class="buy-btn">Buy Now</button>
+        <div class="button-row">
+          <button class="buy-btn">Buy Now</button>
+          <button class="addToWishlist-btn"><i data-lucide="shopping-cart"></i></button>
+        </div>
     </div>
     <div class="product-card">
         <div class="product-image-placeholder"></div>
         <div class="product-title">Product Name</div>
         <div class="product-price">₱4,950.00</div>
-        <button class="buy-btn">Buy Now</button>
+        <div class="button-row">
+          <button class="buy-btn">Buy Now</button>
+          <button class="addToWishlist-btn"><i data-lucide="shopping-cart"></i></button>
+        </div>
     </div>
 </div>
 </div>
