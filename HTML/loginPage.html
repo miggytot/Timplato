@@ -10,10 +10,26 @@
 </head>
 <body>
     <div class="nav">
-    <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
+        <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
         <ul>
-            <li><a href="landingPage.html"><i data-lucide="house"></i></a></li>
-            <li><a href="#contact"><i data-lucide="user"></i></a></li>
+            <li>
+                <a href="../HTML/landingPage.html">
+                    <div class="icon-container">
+                        <span class="icon-house"></span>
+                    </div>
+                </a>
+            </li>
+            <li class="dropdown-user" style="position:relative;">
+                <a href="#" id="userDropdownToggle">
+                    <div class="icon-container">
+                        <span class="icon-user"></span>
+                    </div>
+                </a>
+                <ul id="userDropdownMenu">
+                    <li><a href="loginPage.html">Login</a></li>
+                    <li><a href="signupPage.html">Sign Up</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 

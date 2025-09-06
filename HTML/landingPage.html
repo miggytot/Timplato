@@ -13,17 +13,36 @@
         <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
         <ul>
             <li class="search-nav-item" style="position:relative;">
-                    <a href="#" id="searchToggle"><i data-lucide="search"></i></a>
-                    <input type="text" id="navbarSearchBar" class="navbar-search-bar" placeholder="Search..." />
+                    <a href="#" id="searchToggle">
+                        <div class="icon-container">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                <input type="text" id="navbarSearchBar" class="navbar-search-bar" placeholder="Search..." />
             </li>
-            <li><a href="#about"><i data-lucide="house"></i></a></li>
-            <li><a href="#services"><i data-lucide="shopping-cart"></i></a></li>
+            <li>
+                <a href="../HTML/landingPage.html">
+                    <div class="icon-container">
+                        <span class="icon-house"></span>
+                    </div>
+                </a>
+            </li>
+            <li><a href="../HTML/cart.html">
+                <div class="icon-container">
+                    <span class="icon-cart"></span>
+                </div>
+                </a>
+            </li>
             <li class="dropdown-user" style="position:relative;">
-                <a href="#" id="userDropdownToggle"><i data-lucide="user"></i></a>
-                    <ul id="userDropdownMenu">
-                        <li><a href="loginPage.html">Login</a></li>
-                        <li><a href="signupPage.html">Sign Up</a></li>
-                    </ul>
+                <a href="#" id="userDropdownToggle">
+                    <div class="icon-container">
+                        <span class="icon-user"></span>
+                    </div>
+                </a>
+                <ul id="userDropdownMenu">
+                    <li><a href="loginPage.html">Login</a></li>
+                    <li><a href="signupPage.html">Sign Up</a></li>
+                </ul>
             </li>
         </ul>
     </div>

@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+    --primary-dark: #304C89;
+    --accent-dark-blue: #1E2A47;
+    --primary: #648DE5;
+    --primary-light: #9EB7E5;
+    --accent: #F4AE71;
+    --accent-light: #FFBE86;
+    --accent-dark: #c78b56;
+}
+
+
 * {
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
 
 .nav {
-    background: linear-gradient(to bottom, rgba(51, 51, 51, 0.70) 0%, rgba(51, 51, 51, 0) 100%);
+    background: linear-gradient(to bottom, var(--accent-dark-blue) 0%, rgba(51, 51, 51, 0) 100%);
     color: white;
     padding: 20px 0;
     width: 100vw;
@@ -21,6 +32,116 @@
 .logo {
     height: 70px;
     margin-left: 40px;
+}
+
+/* Icon css */
+.icon-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    color: #ffffff;
+    /* Ensures SVG stroke is white */
+}
+
+.icon-house:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: url("../SVG/house.svg");
+    mask-image: url("../SVG/house.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.icon-user:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: url("../SVG/user.svg");
+    mask-image: url("../SVG/user.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+[class^="icon-"]:hover,
+[class*=" icon-"]:hover {
+    color: var(--accent);
+    transition: color 0.3s;
+}
+
+.icon-house:hover:before,
+.icon-user:hover:before {
+    background-color: var(--accent);
+    transition: background-color 0.3s;
+}
+
+
+.dropdown-user {
+  position: relative;
+}
+
+#userDropdownMenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  border-radius: 8px;
+  min-width: 140px;
+  padding: 0px 0;
+  z-index: 9999;
+  list-style: none;
+  margin: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#userDropdownMenu.dropdown-anim-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#userDropdownMenu li a {
+  display: block;
+  padding: 10px 22px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+#userDropdownMenu li a:hover {
+  background: #f0f0f7;
+  color: #7c5fe6;
 }
 
 .nav ul {
@@ -103,7 +224,7 @@
     text-align: left;
     font-size: 1.6rem;
     font-weight: 700;
-    color: #304C89;
+    color: var(--primary-dark);
     margin-bottom: 10px;
 }
 
@@ -129,7 +250,7 @@
 }
 
 .formInput:focus {
-    border: 1.5px solid #648DE5;
+    border: 1.5px solid var(--primary);
     outline: none;
 }
 
@@ -138,7 +259,7 @@
     padding: 10px 0;
     border-radius: 6px;
     border: none;
-    background: #648DE5;
+    background: var(--primary);
     color: #fff;
     font-size: 1.1rem;
     font-weight: 600;
@@ -159,7 +280,7 @@
 }
 
 .googleButton:hover {
-    background: #f1f1f1;
+    background: #f1f1f1 !important;
 }
 
 /* Google icon inside button */
@@ -169,7 +290,7 @@
 }
 
 .formButton:hover {
-    background: #304C89;
+    background: var(--primary-dark);
 }
 
 .forgotPasswordLink {

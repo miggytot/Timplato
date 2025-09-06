@@ -1,5 +1,14 @@
+:root {
+    --primary-dark: #304C89;
+    --primary: #648DE5;
+    --primary-light: #9EB7E5;
+    --accent: #F4AE71;
+    --accent-light: #FFBE86;
+    --accent-dark: #c78b56;
+}
+
 body {
-    background: #9EB7E5 !important;
+    background: var(--primary-light) !important;
     color: #ccc;
     font-size: 16px;
     line-height: 1.5;
@@ -37,13 +46,13 @@ body {
     padding: 14px 28px;
     border-radius: 14px;
     border: none;
-    background: #F4AE71;
+    background: var(--accent);
     font-size: 1.2rem;
     cursor: pointer;
     transition: background 0.2s;
 }
 .product-search-bar button:hover {
-    background: #d48a49;
+    background: var(--accent-dark);
 }
 
 /* Product Cards Container */
@@ -95,7 +104,7 @@ body {
     margin-left: 20px;
 }
 .product-card .buy-btn {
-    background: #6ea8fe;
+    background: var(--primary);
     color: #fff;
     border: none;
     width: 75%;
@@ -111,14 +120,14 @@ body {
     justify-content: center;
 }
 .product-card .buy-btn:hover {
-    background: #3b7dd8;
+    background: var(--primary-dark);
 }
 
 /* Add to Wishlist button styling */
 .product-card .addToWishlist-btn {
-    background: #6ea8fe;
-    color: #ffffff;
-    border: 2px solid #6ea8fe;
+    background: var(--primary);
+    color: #fff;
+    border: 2px solid var(--primary);
     border-radius: 10px;
     padding: 10px 14px;
     font-size: 1.1rem;
@@ -130,9 +139,9 @@ body {
     transition: background 0.2s, color 0.2s, border 0.2s;
 }
 .product-card .addToWishlist-btn:hover {
-    background: #3b7dd8;
+    background: var(--primary-dark);
     color: #fff;
-    border: 2px solid #3b7dd8;
+    border: 2px solid var(--primary-dark);
 }
 .product-card .button-row {
     display: flex;
