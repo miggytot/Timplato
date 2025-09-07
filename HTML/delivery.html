@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timplato</title>
+    <link rel="icon" type="image/x-icon" href="../timplatoLogo/Timplato-Blue-LOGO.png">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/delivery.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+        <div class="nav">
+        <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
+        <ul>
+            <li class="search-nav-item" style="position:relative;">
+                    <a href="#" id="searchToggle">
+                        <div class="icon-container">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                <input type="text" id="navbarSearchBar" class="navbar-search-bar" placeholder="Search..." />
+            </li>
+            <li>
+                <a href="../HTML/landingPage.html">
+                    <div class="icon-container">
+                        <span class="icon-house"></span>
+                    </div>
+                </a>
+            </li>
+            <li><a href="../HTML/cart.html">
+                <div class="icon-container">
+                    <span class="icon-cart"></span>
+                </div>
+                </a>
+            </li>
+            <li class="dropdown-user" style="position:relative;">
+                <a href="#" id="userDropdownToggle">
+                    <div class="icon-container">
+                        <span class="icon-user"></span>
+                    </div>
+                </a>
+                <ul id="userDropdownMenu">
+                    <li><a href="loginPage.html">Login</a></li>
+                    <li><a href="signupPage.html">Sign Up</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="delivery-page">
+        <div class="container">
+            <!-- Sidebar -->
+            <aside class="delivery-sidebar">
+                <div class="profile">
+                    <div class="profile-img"></div>
+                    <div class="profile-name">ralphgacusan</div>
+                    <a href="editUserProfile.html" class="profile-edit">✎ Edit Profile</a>
+                </div>
+                <ul id="sidebarMenu">
+                    <li class="active" data-content="account">My Account</li>
+                    <li data-content="purchase">My Purchase</li>
+                    <li data-content="notifications">Notifications</li>
+                </ul>
+            </aside>
+            <!-- Main Content -->
+            <main>
+                <div class="delivery-main">
+                    <!-- Tabs -->
+                    <div class="delivery-tabs">
+                        <div class="delivery-tab active" data-tab="to-ship">To Ship</div>
+                    </div>
+                    <!-- Dynamic Content -->
+                    <div id="deliveryContent">
+                        <!-- Default: To Ship -->
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div><span class="store">Timplato</span></div>
+                                <div class="order-actions">
+                                    <button>Chat</button>
+                                </div>
+                            </div>
+                            <div class="order-details">
+                                <img src="../img/product-placeholder.png" alt="Product">
+                                <div class="order-info">
+                                    <div class="title">Product Name</div>
+                                    <div class="variation">Variation: Black</div>
+                                    <div class="qty">x1</div>
+                                </div>
+                                <div class="order-status">
+                                    <div class="delivered">Parcel has been delivered</div>
+                                    <div class="to-receive">TO RECEIVE</div>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="confirm">Confirm receipt after you've checked the received items</div>
+                                <div class="total">Order Total: ₱486</div>
+                            </div>
+                            <div class="order-actions-main">
+                                <button class="received">Order Received</button>
+                                <button class="refund">Request For Return/Refund</button>
+                                <button class="contact">Contact Seller</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="../JS/delivery.js"></script>
+</body>
+</html>
