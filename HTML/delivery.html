@@ -102,11 +102,44 @@
                                 <button class="contact">Contact Seller</button>
                             </div>
                         </div>
+                        <!-- Notification Card (Static) -->
+                        <div class="order-card notification-card">
+                            <div class="notification-header">
+                                <span class="notification-title">Parcel Delivered</span>
+                                <button class="notification-details-btn">View Details</button>
+                            </div>
+                            <div class="notification-details">
+                                <img src="../img/product-placeholder.png" alt="Product" class="notification-img">
+                                <div class="notification-info">
+                                    <div class="notification-desc">Parcel <b>PW6118DKJJNQDB</b> for your order <b>250905MHVGG7J8</b> has been delivered.</div>
+                                    <div class="notification-date">09/06/2025 14:34</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
         </div>
     </div>
     <script src="../JS/delivery.js"></script>
+    <script>
+        // Tab switching logic for sidebar
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const deliveryContent = document.getElementById('deliveryContent');
+        const notificationTabContent = document.getElementById('notificationTabContent');
+        sidebarMenu.querySelectorAll('li').forEach(li => {
+            li.addEventListener('click', function() {
+                sidebarMenu.querySelectorAll('li').forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+                if (this.getAttribute('data-content') === 'notifications') {
+                    deliveryContent.querySelector('.order-card').style.display = 'none';
+                    notificationTabContent.style.display = 'block';
+                } else {
+                    deliveryContent.querySelector('.order-card').style.display = 'block';
+                    notificationTabContent.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

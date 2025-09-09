@@ -35,7 +35,7 @@ const searchBar = document.getElementById('navbarSearchBar');
 let searchOpen = false;
 if (searchToggle && searchBar) {
     // Set initial styles for left expansion
-    searchBar.style.right = '220px';
+    searchBar.style.right = '180px';
     searchBar.style.left = 'auto';
     searchBar.style.textAlign = 'left';
     searchBar.style.direction = 'ltr';
@@ -100,3 +100,39 @@ if (searchToggle && searchBar) {
             list.appendChild(a);
         });
     }
+
+    // Notification Modal Logic
+    const bell = document.getElementById('notificationToggle');
+    const modal = document.getElementById('notificationModal');
+    bell.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('show');
+    });
+    // Hide modal when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+            const bell = document.getElementById('notificationToggle');
+            const modal = document.getElementById('notificationModal');
+            let modalVisible = false;
+            bell.addEventListener('click', function(e) {
+                e.preventDefault();
+                modalVisible = !modalVisible;
+                if (modalVisible) {
+                    modal.classList.add('show');
+                } else {
+                    modal.classList.remove('show');
+                }
+            });
+            // Hide modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                    modalVisible = false;
+                }
+            });
+        });
