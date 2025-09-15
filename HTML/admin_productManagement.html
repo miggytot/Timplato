@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="../CSS/productManagement.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="admin_nav">
+        <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
+        <div class="admin_profile">
+            <img src="../Assets/cyrielPicture.png" alt="Admin Picture" class="admin_picture">
+            <p class="admin_name">Cyriel Alden Obillo</p>
+            <a href="#" id="userDropdownToggle">
+                <div class="icon-container">
+                    <span class="icon-down"></span>
+                </div>
+            </a>
+            <ul id="userDropdownMenu">
+                <li><a href="../HTML/landingPage.html">Log Out</a></li>
+                <li><a href="../HTML/loginPage.html">Change User</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="side_bar" id="sidebar">
+        <ul>
+            <li class="active">
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-package"></span>
+                    </div>
+                    <span class="sidebar-label">Product Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-cart"></span>
+                    </div>
+                    <span class="sidebar-label">Order Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-boxes"></span>
+                    </div>
+                    <span class="sidebar-label">Inventory Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-user"></span>
+                    </div>
+                    <span class="sidebar-label">User Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-barChart"></span>
+                    </div>
+                    <span class="sidebar-label">Sales & Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-file"></span>
+                    </div>
+                    <span class="sidebar-label">Content Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-settings"></span>
+                    </div>
+                    <span class="sidebar-label">Settings & Configuration</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-bell"></span>
+                    </div>
+                    <span class="sidebar-label">Notification Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-container">
+                        <span class="icon-history"></span>
+                    </div>
+                    <span class="sidebar-label">Audit Trail</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Product Management Content (main area) -->
+    <div class="product-management-content">
+        <h2>Product Management</h2>
+        <div class="product-management-controls">
+            <select class="pm-sortby">
+                <option value="az">Sort by: Name (A-Z)</option>
+                <option value="za">Name (Z-A)</option>
+                <option value="price-asc">Price (Low-High)</option>
+                <option value="price-desc">Price (High-Low)</option>
+                <option value="id-asc">ID (Ascending)</option>
+                <option value="id-desc">ID (Descending)</option>
+            </select>
+            <select class="pm-category">
+                <option value="">Category</option>
+                <option value="Cookware">Cookware</option>
+                <option value="Kitchen Tools & Utensils">Kitchen Tools & Utensils</option>
+                <option value="Table & Serving">Table & Serving</option>
+            </select>
+            <input type="text" class="pm-search" placeholder="Search">
+            <button class="pm-add-btn">Add Product</button>
+        </div>
+        <div class="pm-table-container">
+            <table class="pm-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Sub Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Row 1 -->
+                    <tr>
+                        <td>
+                            <div class="pm-image-cell">
+                                <img src="../Products/NonStickFryingPan–28cm.png" alt="Product">
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Nonstick Frying Pan 28 cm</td>
+                        <td>Cookware</td>
+                        <td>Pots & Pan</td>
+                        <td>
+                            <button class="pm-action-btn pm-action-edit" title="Edit">
+                                <span class="icon-container"><span class="icon-pencil"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-delete" title="Delete">
+                                <span class="icon-container"><span class="icon-trash"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-view" title="View">
+                                <span class="icon-container"><span class="icon-eye"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Example Row 2 -->
+                    <tr>
+                        <td>
+                            <div class="pm-image-cell">
+                                <img src="../img/product-placeholder.png" alt="Product">
+                            </div>
+                        </td>
+                        <td>2</td>
+                        <td>Stainless Steel Pot with Lid – 2L</td>
+                        <td>Cookware</td>
+                        <td>Pots & Pan</td>
+                        <td>
+                            <button class="pm-action-btn pm-action-edit" title="Edit">
+                                <span class="icon-container"><span class="icon-pencil"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-delete" title="Delete">
+                                <span class="icon-container"><span class="icon-trash"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-view" title="View">
+                                <span class="icon-container"><span class="icon-eye"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Example Row 3 -->
+                    <tr>
+                        <td>
+                            <div class="pm-image-cell">
+                                <img src="../img/product-placeholder.png" alt="Product">
+                            </div>
+                        </td>
+                        <td>3</td>
+                        <td>Cast Iron Frying Pan – 10 inch</td>
+                        <td>Cookware</td>
+                        <td>Pots & Pan</td>
+                        <td>
+                            <button class="pm-action-btn pm-action-edit" title="Edit">
+                                <span class="icon-container"><span class="icon-pencil"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-delete" title="Delete">
+                                <span class="icon-container"><span class="icon-trash"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-view" title="View">
+                                <span class="icon-container"><span class="icon-eye"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Example Row 4 -->
+                    <tr>
+                        <td>
+                            <div class="pm-image-cell">
+                                <img src="../img/product-placeholder.png" alt="Product">
+                            </div>
+                        </td>
+                        <td>4</td>
+                        <td>Ceramic-Coated Cooking Pan</td>
+                        <td>Cookware</td>
+                        <td>Pots & Pan</td>
+                        <td>
+                            <button class="pm-action-btn pm-action-edit" title="Edit">
+                                <span class="icon-container"><span class="icon-pencil"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-delete" title="Delete">
+                                <span class="icon-container"><span class="icon-trash"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-view" title="View">
+                                <span class="icon-container"><span class="icon-eye"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Example Row 5 -->
+                    <tr>
+                        <td>
+                            <div class="pm-image-cell">
+                                <img src="../img/product-placeholder.png" alt="Product">
+                            </div>
+                        </td>
+                        <td>5</td>
+                        <td>Large Aluminum Cooking Pot – 5L</td>
+                        <td>Cookware</td>
+                        <td>Pots & Pan</td>
+                        <td>
+                            <button class="pm-action-btn pm-action-edit" title="Edit">
+                                <span class="icon-container"><span class="icon-pencil"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-delete" title="Delete">
+                                <span class="icon-container"><span class="icon-trash"></span></span>
+                            </button>
+                            <button class="pm-action-btn pm-action-view" title="View">
+                                <span class="icon-container"><span class="icon-eye"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../JS/productManagement.js"></script>
+</body>
+</html>

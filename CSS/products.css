@@ -103,6 +103,7 @@ body {
     margin-bottom: 18px;
     margin-left: 20px;
 }
+
 .product-card .buy-btn {
     background: var(--primary);
     color: #fff;
@@ -124,7 +125,7 @@ body {
 }
 
 /* Add to Wishlist button styling */
-.product-card .addToWishlist-btn {
+.product-card .add-cart-btn {
     background: var(--primary);
     color: #fff;
     border: 2px solid var(--primary);
@@ -138,7 +139,7 @@ body {
     margin-left: 0;
     transition: background 0.2s, color 0.2s, border 0.2s;
 }
-.product-card .addToWishlist-btn:hover {
+.product-card .add-cart-btn:hover {
     background: var(--primary-dark);
     color: #fff;
     border: 2px solid var(--primary-dark);
@@ -149,4 +150,39 @@ body {
     gap: 12px;
     width: 100%;
     margin-top: 8px;
+}
+
+.wishlist-btn {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #FF914D;
+    color: #fff;
+    padding: 0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.product-card .wishlist-btn:hover {
+    background: #E67E3D;
+    transform: scale(1.1);
+}
+
+/* Added-to-wishlist state */
+.product-card .wishlist-btn.added {
+    background: #E67E3D;
+    /* darker orange */
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Optional: filled heart icon for added */
+.product-card .wishlist-btn.added i {
+    stroke: #fff;
+    fill: #fff;
+    /* make the heart fully filled */
 }

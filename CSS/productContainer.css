@@ -1,0 +1,141 @@
+/* Product Cards Container */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+    padding-top: 30px !important;
+    margin-bottom: 50px;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+
+    height: 450px;
+    /* fixed height for all cards */
+    box-sizing: border-box;
+    /* includes padding in height */
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: contain;
+    /* margin-bottom: 18px; */
+}
+
+.product-image-placeholder {
+    width: 100%;
+    height: 140px;
+    background: #ccc;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+.product-card .product-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+    text-align: left;
+}
+.product-card .product-price {
+    font-size: 1.2rem;
+    align-self: flex-start;
+    text-align: left;
+    margin-bottom: 18px;
+    margin-left: 20px;
+}
+
+.product-card .buy-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    width: 75%;
+    border-radius: 10px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    vertical-align: middle;
+    justify-content: center;
+}
+.product-card .buy-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Add to Wishlist button styling */
+.product-card .add-cart-btn {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background: var(--primary);
+    color: #fff;
+    padding: 0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.product-card .add-cart-btn:hover {
+    background: var(--primary-dark);
+    color: #fff;
+    border: 2px solid var(--primary-dark);
+}
+
+.product-card .button-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.wishlist-btn {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #FF914D;
+    color: #fff;
+    padding: 0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.product-card .wishlist-btn:hover {
+    background: #E67E3D;
+    transform: scale(1.1);
+}
+
+/* Added-to-wishlist state */
+.product-card .wishlist-btn.added {
+    background: #E67E3D;
+    /* darker orange */
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Optional: filled heart icon for added */
+.product-card .wishlist-btn.added i {
+    stroke: #fff;
+    fill: #fff;
+    /* make the heart fully filled */
+}
