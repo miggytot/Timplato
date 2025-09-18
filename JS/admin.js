@@ -32,14 +32,26 @@ document.addEventListener('click', function (e) {
 // Sidebar expand/collapse toggle
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+
+    function updateBodySidebarClass() {
+        if (sidebar.classList.contains('expanded')) {
+            body.classList.add('sidebar-expanded');
+        } else {
+            body.classList.remove('sidebar-expanded');
+        }
+    }
+
     sidebar.addEventListener('mouseenter', function () {
         sidebar.classList.add('expanded');
+        updateBodySidebarClass();
     });
     sidebar.addEventListener('mouseleave', function () {
         sidebar.classList.remove('expanded');
+        updateBodySidebarClass();
     });
-    // Optional: click to toggle
     sidebar.addEventListener('click', function () {
         sidebar.classList.toggle('expanded');
+        updateBodySidebarClass();
     });
 });
