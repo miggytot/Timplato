@@ -108,7 +108,7 @@
     <h2>Add Product</h2>
     <form id="addProductForm" autocomplete="off">
         <div class="add-product-grid">
-            <!-- Name and Description -->
+            <!-- LEFT: Name and Description -->
             <div class="add-product-section add-product-desc">
                 <h3>Name and Description</h3>
                 <label for="productName">Product Name</label>
@@ -116,7 +116,7 @@
                 <label for="productDesc">Product Description</label>
                 <textarea id="productDesc" name="productDesc" placeholder="Enter Description" rows="6" required></textarea>
             </div>
-            <!-- Pricing and Category -->
+            <!-- RIGHT: Pricing and Stocks -->
             <div class="add-product-right">
                 <div class="add-product-section add-product-pricing">
                     <h3>Pricing and Stocks</h3>
@@ -125,47 +125,60 @@
                         <span class="peso-sign">&#8369;</span>
                         <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" required>
                     </div>
-                    <label for="productQty">Quantity</label>
-                    <input type="number" id="productQty" name="productQty" min="0" step="1" placeholder="Enter Quantity" required>
+                    <div class="quantity-restock-row">
+                        <div class="input-group">
+                            <label for="productQty">Quantity</label>
+                            <input type="number" id="productQty" name="productQty" min="0" step="1" placeholder="Enter Quantity" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="restockLevel">Restock Level</label>
+                            <input type="number" id="restockLevel" name="restockLevel" min="0" step="1" placeholder="Restock Level" required>
+                        </div>
+                    </div>
                 </div>
+                <!-- Category is now below Pricing and Stocks, still in the right column -->
                 <div class="add-product-section add-product-category">
                     <h3>Category</h3>
-                    <label for="productCategory">Product Category</label>
-                    <select id="productCategory" name="productCategory" required>
-                        <option value="">Select Category</option>
-                        <option value="Cookware">Cookware</option>
-                        <option value="Kitchen Tools & Utensils">Kitchen Tools & Utensils</option>
-                        <option value="Table & Serving">Table & Serving</option>
-                    </select>
-                    <label for="productSubCategory">Product Sub-Category</label>
-                    <select id="productSubCategory" name="productSubCategory" required>
-                        <option value="">Select Sub-Category</option>
-                    </select>
+                    <div class="category-row">
+                        <label for="productCategory">Product Category</label>
+                        <select id="productCategory" name="productCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="Cookware">Cookware</option>
+                            <option value="Kitchen Tools & Utensils">Kitchen Tools & Utensils</option>
+                            <option value="Table & Serving">Table & Serving</option>
+                        </select>
+                    </div>
+                    <div class="subcategory-row">
+                        <label for="productSubCategory">Product Sub-Category</label>
+                        <select id="productSubCategory" name="productSubCategory" required>
+                            <option value="">Select Sub-Category</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Product Image Section -->
-            <div class="add-product-section add-product-images">
-                <h3>Product Image</h3>
-                <div class="image-upload-scroll">
-                    <div class="image-upload-list" id="imageUploadList">
-                        <label class="image-upload-box">
-                            <input type="file" accept="image/*" multiple style="display:none;" id="productImages">
-                            <div class="icon-container">
-                                <span class="icon-image-plus"></span>
-                            </div>
-                            <span class="upload-text">Click to Upload</span>
-                        </label>
-                        <!-- Uploaded images will appear here-->
-                    </div>
-                </div>
-                <div class="add-product-actions">
-                    <button type="button" class="clear-all-btn" id="clearAllImages">Clear All</button>
-                    <button type="submit" class="add-product-btn">Add Product</button>
+        <!-- BOTTOM: Product Image (spans both columns) -->
+        <div class="add-product-section add-product-images">
+            <h3>Product Image</h3>
+            <div class="image-upload-scroll">
+                <div class="image-upload-list" id="imageUploadList">
+                    <label class="image-upload-box">
+                        <input type="file" accept="image/*" multiple style="display:none;" id="productImages">
+                        <div class="icon-container">
+                            <span class="icon-image-plus"></span>
+                        </div>
+                        <span class="upload-text">Click to Upload</span>
+                    </label>
+                    <!-- Uploaded images will appear here-->
                 </div>
             </div>
-        </form>
-    </div>
+            <div class="add-product-actions">
+                <button type="button" class="clear-all-btn" id="clearAllImages">Clear All</button>
+                <button type="submit" class="add-product-btn">Add Product</button>
+            </div>
+        </div>
+    </form>
+</div>
     
     <script src="../JS/admin.js"></script>
     <script src="../JS/addProduct.js"></script>
