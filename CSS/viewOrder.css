@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-dark: #304C89;
+    --primary: #648DE5;
+    --primary-light: #E1E8F6;
+    --border: #bfc4cc;
+    --danger: #e74c3c;
+    --danger-light: #fbeaea;
+    --success: #FF914D;
+    --white: #fff;
+    --radius: 12px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.06);
+    --input-bg: #fff;
+    --input-border: #bfc4cc;
+}
+
+/* Main content layout */
+.main_content {
+    margin-left: 25px;
+    margin-top: 70px;
+    padding: 32px 32px 0 12px;
+    font-family: 'Inter', sans-serif;
+    transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
+}
+.side_bar.expanded ~ .main_content {
+    margin-left: 260px;
+}
+
+/* Heading */
+.main_content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #304C89;
+}
+
+/* Order details section */
+/* .order-details {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26) !important;
+    padding: 24px 32px;
+    margin-bottom: 28px;
+    font-size: 1.08rem;
+} */
+.order-details p {
+    margin-bottom: 10px;
+    color: #222;
+}
+.order-details strong {
+    color: #304C89;
+}
+
+/* Order items table */
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.247);
+    margin-bottom: 28px;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.order-items-table th {
+    background: #304C89;
+    color: #fff;
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+.order-items-table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1.5px solid #e0e4ea;
+    background: #F8F8F8;
+}
+.order-items-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Product image cell */
+.om-image-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #304C89;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.om-image-cell img {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Order summary */
+.order-summary {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 20px 32px;
+    margin-bottom: 28px;
+    font-size: 1.08rem;
+    max-width: 350px;
+    float: right;
+    margin-left: 32px;
+}
+
+/* Move order actions to the right side below order summary */
+.order-actions {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+    justify-content: flex-end;
+    float: right;
+    clear: both;
+}
+
+/* Clear floats after main content if needed */
+.main_content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.order-summary p {
+    margin-bottom: 10px;
+    color: #222;
+}
+.order-summary strong {
+    color: #304C89;
+}
+
+/* Order actions */
+.order-actions {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+    justify-content: flex-end;
+    float: right;
+    clear: both;
+}
+.update-status-btn,
+.contact-customer-btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.update-status-btn {
+    background: #648DE5;
+    color: #fff;
+}
+.update-status-btn:hover {
+    background: #304C89;
+}
+.contact-customer-btn {
+    background: #FF914D;
+    color: #fff;
+}
+.contact-customer-btn:hover {
+    background: #E67E3D;
+}
+
+/* Print Invoice Button */
+.print-invoice-btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: var(--primary);
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+.print-invoice-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Manage Returns Button */
+.manage-returns-btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: #e74c3c;
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+.manage-returns-btn:hover {
+    background: #c0392b;
+}
+
+/* Flex row for order and delivery details */
+.order-details-row {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 28px;
+    align-items: stretch; /* Ensures equal height */
+}
+
+.order-details,
+.delivery-details {
+    flex: 1 1 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+    padding: 24px 32px;
+    font-size: 1.08rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%; /* Ensures both stretch equally */
+    height: 100%;
+}
+
+.order-details p,
+.delivery-details p {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.order-details strong,
+.delivery-details strong {
+    color: #304C89;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main_content {
+        margin-left: 0 !important;
+        padding: 16px 4px 0 4px;
+    }
+    .order-details,
+    .order-summary {
+        padding: 16px 10px;
+    }
+    .order-items-table th,
+    .order-items-table td {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+    .order-summary,
+    .order-actions {
+        float: none;
+        margin-left: 0;
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+    .order-details-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .order-details,
+    .delivery-details {
+        padding: 16px 10px;
+    }
+}
+@media (max-width: 600px) {
+    .order-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .order-summary {
+        max-width: 100%;
+    }
+}

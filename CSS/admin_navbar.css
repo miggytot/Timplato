@@ -119,8 +119,8 @@
     mask-position: center;
     background-color: #222; /* black */
     position: absolute;
-    top: 4px;
-    left: -12px;
+    /* top: 4px;
+    left: -12px; */
 }
 
 .icon-down:before {
@@ -290,7 +290,7 @@
 .side_bar ul {
     list-style: none;
     padding: 0;
-    margin: 0px 0 0 0;
+    margin: 0px 0px 0 0;
 }
 
 .side_bar li {
@@ -341,40 +341,6 @@
     position: relative;
     color: #222; /* black */
 }
-
-.icon-pencil:before,
-.icon-trash:before,
-.icon-eye:before {
-    content: '';
-    display: block;
-    width: 25px;
-    height: 25px;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    -webkit-mask-position: center;
-    mask-position: center;
-    background-color: #222; /* black */
-    position: absolute;
-    top: 4px;
-    left: -12px;
-}
-
-.icon-pencil:before {
-    -webkit-mask-image: url("../SVG/pencil.svg");
-    mask-image: url("../SVG/pencil.svg");
-}
-.icon-trash:before {
-    -webkit-mask-image: url("../SVG/trash.svg");
-    mask-image: url("../SVG/trash.svg");
-}
-
-.icon-eye:before {
-    -webkit-mask-image: url("../SVG/eye.svg");
-    mask-image: url("../SVG/eye.svg");
-}
-
 
 /* Sidebar */
 .side_bar .sidebar-label {

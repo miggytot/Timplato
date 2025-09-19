@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Order</title>
+    <link rel="stylesheet" href="../CSS/admin_navbar.css">
+    <link rel="stylesheet" href="../CSS/viewOrder.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="admin_nav">
+        <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
+        <div class="admin_profile">
+            <img src="../Assets/cyrielPicture.png" alt="Admin Picture" class="admin_picture">
+            <p class="admin_name">Cyriel Alden Obillo</p>
+            <a href="#" id="userDropdownToggle">
+                <div class="icon-container">
+                    <span class="icon-down"></span>
+                </div>
+            </a>
+            <ul id="userDropdownMenu">
+                <li><a href="../HTML/landingPage.html">Log Out</a></li>
+                <li><a href="../HTML/loginPage.html">Change User</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="side_bar" id="sidebar">
+        <ul>
+            <li class="#">
+                <a href="../HTML/admin_productManagement.html" onclick="window.location.href='admin_productManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-package"></span>
+                    </div>
+                    <span class="sidebar-label">Product Management</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="admin_orderManagement.html" onclick="window.location.href='admin_orderManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-cart"></span>
+                    </div>
+                    <span class="sidebar-label">Order Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_inventoryManagement.html" onclick="window.location.href='admin_inventoryManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-boxes"></span>
+                    </div>
+                    <span class="sidebar-label">Inventory Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_userManagement.html" onclick="window.location.href='admin_userManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-user"></span>
+                    </div>
+                    <span class="sidebar-label">User Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_salesReports.html" onclick="window.location.href='admin_salesReports.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-barChart"></span>
+                    </div>
+                    <span class="sidebar-label">Sales & Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_contentManagement.html" onclick="window.location.href='admin_contentManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-file"></span>
+                    </div>
+                    <span class="sidebar-label">Content Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_settings.html" onclick="window.location.href='admin_settings.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-settings"></span>
+                    </div>
+                    <span class="sidebar-label">Settings & Configuration</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_notificationManagement.html" onclick="window.location.href='admin_notificationManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-bell"></span>
+                    </div>
+                    <span class="sidebar-label">Notification Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_auditTrail.html" onclick="window.location.href='admin_auditTrail.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-history"></span>
+                    </div>
+                    <span class="sidebar-label">Audit Trail</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Main Content View Order -->
+    <div class="main_content">
+        <h1>Order Details</h1>
+        <div class="order-details-row">
+            <div class="order-details">
+                <p><strong>Order ID:</strong> #123456</p>
+                <p><strong>Customer Name:</strong> John Doe</p>
+                <p><strong>Order Date:</strong> January 1, 2024</p>
+                <p><strong>Status:</strong> Processing</p>
+            </div>
+            <div class="delivery-details">
+                <p><strong>Courier:</strong> JNT Express</p>
+                <p><strong>Delivery Method:</strong> Standard Delivery</p>
+                <p><strong>Payment Method:</strong> Cash on Delivery</p>
+                <p><strong>Voucher Used:</strong> ALDEN50</p>
+            </div>
+        </div>
+        <table class="order-items-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="om-image-cell">
+                            <img src="../Products/NonStickFryingPan–28cm.png" alt="Product A" style="width:56px;height:56px;object-fit:cover;border-radius:8px;">
+                        </div>
+                    </td>
+                    <td>Nonstick Frying Pan 28 cm</td>
+                    <td>2</td>
+                    <td>₱50.00</td>
+                    <td>₱100.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="om-image-cell">
+                            <img src="../img/product-placeholder.png" alt="Product B" style="width:56px;height:56px;object-fit:cover;border-radius:8px;">
+                        </div>
+                    </td>
+                    <td>Product B</td>
+                    <td>1</td>
+                    <td>₱30.00</td>
+                    <td>₱30.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="order-summary">
+            <p><strong>Subtotal:</strong> ₱130.00</p>
+            <p><strong>Shipping:</strong> ₱10.00</p>
+            <p><strong>Total:</strong> ₱140.00</p>
+        </div>
+        <div class="order-actions">
+            <button class="update-status-btn">Update Status</button>
+            <button class="print-invoice-btn">Print Invoice</button>
+            <button class="contact-customer-btn">Contact Customer</button>
+            <button class="manage-returns-btn">Manage Returns</button>
+        </div>
+    <script src="../JS/admin.js"></script>
+</body>
+</html>
