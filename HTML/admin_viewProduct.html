@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Product</title>
+    <link rel="stylesheet" href="../CSS/editProduct.css">
+    <style>
+        /* Add this to your CSS file for static fields */
+        .static-field {
+            padding: 10px 12px;
+            background: #f7f7f7;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 10px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="admin_nav">
+        <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
+        <div class="admin_profile">
+            <img src="../Assets/cyrielPicture.png" alt="Admin Picture" class="admin_picture">
+            <p class="admin_name">Cyriel Alden Obillo</p>
+            <a href="#" id="userDropdownToggle">
+                <div class="icon-container">
+                    <span class="icon-down"></span>
+                </div>
+            </a>
+            <ul id="userDropdownMenu">
+                <li><a href="../HTML/landingPage.html">Log Out</a></li>
+                <li><a href="../HTML/loginPage.html">Change User</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="side_bar" id="sidebar">
+        <ul>
+            <li class="active">
+                <a href="../HTML/admin_productManagement.html" onclick="window.location.href='admin_productManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-package"></span>
+                    </div>
+                    <span class="sidebar-label">Product Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_orderManagement.html" onclick="window.location.href='admin_orderManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-cart"></span>
+                    </div>
+                    <span class="sidebar-label">Order Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_inventoryManagement.html" onclick="window.location.href='admin_inventoryManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-boxes"></span>
+                    </div>
+                    <span class="sidebar-label">Inventory Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_userManagement.html" onclick="window.location.href='admin_userManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-user"></span>
+                    </div>
+                    <span class="sidebar-label">User Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_salesReports.html" onclick="window.location.href='admin_salesReports.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-barChart"></span>
+                    </div>
+                    <span class="sidebar-label">Sales & Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_contentManagement.html" onclick="window.location.href='admin_contentManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-file"></span>
+                    </div>
+                    <span class="sidebar-label">Content Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_settings.html" onclick="window.location.href='admin_settings.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-settings"></span>
+                    </div>
+                    <span class="sidebar-label">Settings & Configuration</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_notificationManagement.html" onclick="window.location.href='admin_notificationManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-bell"></span>
+                    </div>
+                    <span class="sidebar-label">Notification Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_auditTrail.html" onclick="window.location.href='admin_auditTrail.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-history"></span>
+                    </div>
+                    <span class="sidebar-label">Audit Trail</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- View Product Details -->
+    <div class="add-product-content">
+        <h2>View Product</h2>
+        <div class="add-product-grid">
+            <!-- Name and Description -->
+            <div class="add-product-section add-product-desc">
+                <h3>Name and Description</h3>
+                <label>Product Name</label>
+                <div class="static-field">Nonstick Frying Pan 28 cm</div>
+                <label>Product Description</label>
+                <div class="static-field">
+                    Durable nonstick frying pan, 28cm diameter, perfect for everyday cooking.
+                </div>
+            </div>
+            <!-- Pricing and Category -->
+            <div class="add-product-right">
+                <div class="add-product-section add-product-pricing">
+                    <h3>Pricing and Stocks</h3>
+                    <label>Price</label>
+                    <div class="static-field">&#8369; 799.00</div>
+                    <label>Quantity</label>
+                    <div class="static-field">25</div>
+                </div>
+                <div class="add-product-section add-product-category">
+                    <h3>Category</h3>
+                    <label>Product Category</label>
+                    <div class="static-field">Cookware</div>
+                    <label>Product Sub-Category</label>
+                    <div class="static-field">Pots & Pans</div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Image Section -->
+        <div class="add-product-section add-product-images">
+            <h3>Product Image</h3>
+            <div class="image-upload-scroll">
+                <div class="image-upload-list" id="imageUploadList">
+                    <!-- Existing product image -->
+                    <div class="uploaded-image-box">
+                        <img src="../Products/NonStickFryingPan–28cm.png" alt="Product Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../JS/admin.js"></script>
+    <script src="../JS/addProduct.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="../CSS/editProduct.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="admin_nav">
+        <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
+        <div class="admin_profile">
+            <img src="../Assets/cyrielPicture.png" alt="Admin Picture" class="admin_picture">
+            <p class="admin_name">Cyriel Alden Obillo</p>
+            <a href="#" id="userDropdownToggle">
+                <div class="icon-container">
+                    <span class="icon-down"></span>
+                </div>
+            </a>
+            <ul id="userDropdownMenu">
+                <li><a href="../HTML/landingPage.html">Log Out</a></li>
+                <li><a href="../HTML/loginPage.html">Change User</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="side_bar" id="sidebar">
+        <ul>
+            <li class="active">
+                <a href="../HTML/admin_productManagement.html" onclick="window.location.href='admin_productManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-package"></span>
+                    </div>
+                    <span class="sidebar-label">Product Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_orderManagement.html" onclick="window.location.href='admin_orderManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-cart"></span>
+                    </div>
+                    <span class="sidebar-label">Order Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_inventoryManagement.html" onclick="window.location.href='admin_inventoryManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-boxes"></span>
+                    </div>
+                    <span class="sidebar-label">Inventory Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_userManagement.html" onclick="window.location.href='admin_userManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-user"></span>
+                    </div>
+                    <span class="sidebar-label">User Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_salesReports.html" onclick="window.location.href='admin_salesReports.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-barChart"></span>
+                    </div>
+                    <span class="sidebar-label">Sales & Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_contentManagement.html" onclick="window.location.href='admin_contentManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-file"></span>
+                    </div>
+                    <span class="sidebar-label">Content Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_settings.html" onclick="window.location.href='admin_settings.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-settings"></span>
+                    </div>
+                    <span class="sidebar-label">Settings & Configuration</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_notificationManagement.html" onclick="window.location.href='admin_notificationManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-bell"></span>
+                    </div>
+                    <span class="sidebar-label">Notification Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_auditTrail.html" onclick="window.location.href='admin_auditTrail.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-history"></span>
+                    </div>
+                    <span class="sidebar-label">Audit Trail</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Add Product Form -->
+    <div class="add-product-content">
+    <h2>Edit Product</h2>
+    <form id="editProductForm" autocomplete="off">
+        <div class="add-product-grid">
+            <!-- Name and Description -->
+            <div class="add-product-section add-product-desc">
+                <h3>Name and Description</h3>
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" name="productName" value="Nonstick Frying Pan 28 cm" required>
+                <label for="productDesc">Product Description</label>
+                <textarea id="productDesc" name="productDesc" rows="6" required>Durable nonstick frying pan, 28cm diameter, perfect for everyday cooking.</textarea>
+            </div>
+            <!-- Pricing and Category -->
+            <div class="add-product-right">
+                <div class="add-product-section add-product-pricing">
+                    <h3>Pricing and Stocks</h3>
+                    <label for="productPrice">Price</label>
+                    <div class="input-icon">
+                        <span class="peso-sign">&#8369;</span>
+                        <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" value="799.00" required>
+                    </div>
+                    <label for="productQty">Quantity</label>
+                    <input type="number" id="productQty" name="productQty" min="0" step="1" value="25" required>
+                </div>
+                <div class="add-product-section add-product-category">
+                    <h3>Category</h3>
+                    <label for="productCategory">Product Category</label>
+                    <select id="productCategory" name="productCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="Cookware" selected>Cookware</option>
+                        <option value="Kitchen Tools & Utensils">Kitchen Tools & Utensils</option>
+                        <option value="Table & Serving">Table & Serving</option>
+                    </select>
+                    <label for="productSubCategory">Product Sub-Category</label>
+                    <select id="productSubCategory" name="productSubCategory" required>
+                        <option value="">Select Sub-Category</option>
+                        <option value="Pots & Pans" selected>Pots & Pans</option>
+                        <option value="Cookware Sets">Cookware Sets</option>
+                        <option value="Specialty Cookware">Specialty Cookware</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- Product Image Section -->
+        <div class="add-product-section add-product-images">
+            <h3>Product Image</h3>
+            <div class="image-upload-scroll">
+                <div class="image-upload-list" id="imageUploadList">
+                    <!-- Existing product image -->
+                    <div class="uploaded-image-box">
+                        <img src="../Products/NonStickFryingPan–28cm.png" alt="Product Image">
+                        <button type="button" class="remove-image-btn">Remove</button>
+                    </div>
+                    <!-- Upload new images -->
+                    <label class="image-upload-box">
+                        <input type="file" accept="image/*" multiple style="display:none;" id="productImages">
+                        <div class="icon-container">
+                            <span class="icon-image-plus"></span>
+                        </div>
+                        <span class="upload-text">Click to Upload</span>
+                    </label>
+                </div>
+            </div>
+            <div class="add-product-actions">
+                <button type="button" class="clear-all-btn" id="clearAllImages">Clear All</button>
+                <button type="submit" class="add-product-btn">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</div>
+    
+    <script src="../JS/admin.js"></script>
+    <script src="../JS/addProduct.js"></script>
+</body>
+</html>
