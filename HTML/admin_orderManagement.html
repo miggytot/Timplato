@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="../CSS/admin_navbar.css">
+    <link rel="stylesheet" href="../CSS/orderManagement.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="admin_nav">
+        <img src="../timplatoLogo/Timplato-White2.png" alt="Timplato Logo" class="logo">
+        <div class="admin_profile">
+            <img src="../Assets/cyrielPicture.png" alt="Admin Picture" class="admin_picture">
+            <p class="admin_name">Cyriel Alden Obillo</p>
+            <a href="#" id="userDropdownToggle">
+                <div class="icon-container">
+                    <span class="icon-down"></span>
+                </div>
+            </a>
+            <ul id="userDropdownMenu">
+                <li><a href="../HTML/landingPage.html">Log Out</a></li>
+                <li><a href="../HTML/loginPage.html">Change User</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="side_bar" id="sidebar">
+        <ul>
+            <li class="active">
+                <a href="../HTML/admin_productManagement.html" onclick="window.location.href='admin_productManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-package"></span>
+                    </div>
+                    <span class="sidebar-label">Product Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_orderManagement.html" onclick="window.location.href='admin_orderManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-cart"></span>
+                    </div>
+                    <span class="sidebar-label">Order Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_inventoryManagement.html" onclick="window.location.href='admin_inventoryManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-boxes"></span>
+                    </div>
+                    <span class="sidebar-label">Inventory Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_userManagement.html" onclick="window.location.href='admin_userManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-user"></span>
+                    </div>
+                    <span class="sidebar-label">User Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_salesReports.html" onclick="window.location.href='admin_salesReports.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-barChart"></span>
+                    </div>
+                    <span class="sidebar-label">Sales & Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_contentManagement.html" onclick="window.location.href='admin_contentManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-file"></span>
+                    </div>
+                    <span class="sidebar-label">Content Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_settings.html" onclick="window.location.href='admin_settings.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-settings"></span>
+                    </div>
+                    <span class="sidebar-label">Settings & Configuration</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_notificationManagement.html" onclick="window.location.href='admin_notificationManagement.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-bell"></span>
+                    </div>
+                    <span class="sidebar-label">Notification Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="admin_auditTrail.html" onclick="window.location.href='admin_auditTrail.html'; return false;">
+                    <div class="icon-container">
+                        <span class="icon-history"></span>
+                    </div>
+                    <span class="sidebar-label">Audit Trail</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Order Management Content (main area) -->
+    <div class="order-management-content">
+        <h2>Order Management</h2>
+        <div class="order-management-controls">
+            <select class="om-sortby">
+                <option value="az">Sort by: Name (A-Z)</option>
+                <option value="za">Name (Z-A)</option>
+                <option value="date-desc">Date (Newest)</option>
+                <option value="date-asc">Date (Oldest)</option>
+                <option value="id-asc">ID (Ascending)</option>
+                <option value="id-desc">ID (Descending)</option>
+            </select>
+            <input type="text" class="om-search" placeholder="Search Orders">
+        </div>
+        <div class="order-management-table-container">
+            <table class="order-management-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Order ID</th>
+                        <th>MOP</th>
+                        <th>Status</th>
+                        <th>Order Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Row 1 -->
+                    <tr>
+                        <td>
+                            <div class="om-image-cell">
+                                <img src="../Products/NonStickFryingPan–28cm.png" alt="Order Product">
+                            </div>
+                        </td>
+                        <td>ORD-1001</td>
+                        <td>GCash</td>
+                        <td>
+                            <span class="om-status-static">Pending</span>
+                        </td>
+                        <td>Sep-19-2025</td>
+                        <td>
+                            <button class="om-action-btn om-action-edit" title="Edit">
+                                <span class="icon-container"><span class="icon-pencil"></span></span>
+                            </button>
+                            <button class="om-action-btn om-action-delete" title="Delete">
+                                <span class="icon-container"><span class="icon-trash"></span></span>
+                            </button>
+                            <button class="om-action-btn om-action-view" title="View">
+                                <span class="icon-container"><span class="icon-eye"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Example Row 2 -->
+                    <tr>
+                        <td>
+                            <div class="om-image-cell">
+                                <img src="../img/product-placeholder.png" alt="Order Product">
+                            </div>
+                        </td>
+                        <td>ORD-1002</td>
+                        <td>COD</td>
+                        <td>
+                            <span class="om-status-static">Processing</span>
+                        </td>
+                        <td>Sep-18-2025</td>
+                        <td>
+                            <button class="om-action-btn om-action-edit" title="Edit">
+                                <span class="icon-container"><span class="icon-pencil"></span></span>
+                            </button>
+                            <button class="om-action-btn om-action-delete" title="Delete">
+                                <span class="icon-container"><span class="icon-trash"></span></span>
+                            </button>
+                            <button class="om-action-btn om-action-view" title="View">
+                                <span class="icon-container"><span class="icon-eye"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Example Row 3 -->
+                    <tr>
+                        <td>
+                            <div class="om-image-cell">
+                                <img src="../img/product-placeholder.png" alt="Order Product">
+                            </div>
+                        </td>
+                        <td>ORD-1003</td>
+                        <td>Bank Transfer</td>
+                        <td>
+                            <span class="om-status-static">Shipped</span>
+                        </td>
+                        <td>Sep-17-2025</td>
+                        <td>
+                            <button class="om-action-btn om-action-edit" title="Edit">
+                                <span class="icon-container"><span class="icon-pencil"></span></span>
+                            </button>
+                            <button class="om-action-btn om-action-delete" title="Delete">
+                                <span class="icon-container"><span class="icon-trash"></span></span>
+                            </button>
+                            <button class="om-action-btn om-action-view" title="View">
+                                <span class="icon-container"><span class="icon-eye"></span></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="../JS/admin.js"></script>
+</body>
+</html>

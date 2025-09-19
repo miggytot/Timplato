@@ -118,8 +118,8 @@
     mask-position: center;
     background-color: #222; /* black */
     position: absolute;
-    top: 4px;
-    left: -3px;
+    top: -6px;
+    left: -5px;
 }
 
 .icon-down:before {

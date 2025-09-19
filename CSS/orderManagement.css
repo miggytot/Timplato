@@ -1,0 +1,245 @@
+/* --- Reset and Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-dark: #304C89;
+    --primary: #648DE5;
+    --primary-light: #E1E8F6;
+    --border: #bfc4cc;
+    --danger: #e74c3c;
+    --danger-light: #fbeaea;
+    --success: #FF914D;
+    --white: #fff;
+    --radius: 12px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.06);
+    --input-bg: #fff;
+    --input-border: #bfc4cc;
+}
+
+/* --- Controls Styling (similar to productManagement.css) --- */
+.order-management-controls {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+    padding: 0 0 0 4px;
+}
+
+.om-sortby {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1.5px solid var(--input-border);
+    background: var(--input-bg);
+    font-size: 1rem;
+    color: #222;
+    outline: none;
+    transition: border-color 0.2s;
+    min-width: 180px;
+    box-shadow: 0 1px 2px rgba(100, 141, 229, 0.04);
+}
+
+.om-sortby:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px #648de533;
+}
+
+.om-search {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1.5px solid var(--input-border);
+    background: var(--input-bg);
+    font-size: 1rem;
+    min-width: 260px;
+    transition: border-color 0.2s;
+    box-shadow: 0 1px 2px rgba(100, 141, 229, 0.04);
+}
+
+.om-search:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px #648de533;
+}
+
+@media (max-width: 700px) {
+    .order-management-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 0;
+    }
+    .om-search, .om-sortby {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+/* --- Table Styles --- */
+.order-management-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.order-management-table-container {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+    margin-bottom: 32px;
+}
+
+.order-management-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    min-width: 900px;
+}
+
+.order-management-table thead tr {
+    background: var(--primary-dark);
+    color: #fff;
+}
+
+.order-management-table th, .order-management-table td {
+    border: none;
+    border-bottom: 1.5px solid #e0e4ea;
+    padding: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.order-management-table tbody tr {
+    background: #F8F8F8;
+}
+
+.order-management-table tbody tr:not(:last-child) {
+    border-bottom: 2px solid #dddddd;
+}
+
+.order-management-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.om-image-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #304C89;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+.om-image-cell img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+
+/* Icons */
+
+.icon-pencil:before,
+.icon-trash:before,
+.icon-eye:before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: #222; /* black */
+    position: absolute;
+    top: 4px;
+    left: -12px;
+}
+
+.icon-pencil:before {
+    -webkit-mask-image: url("../SVG/pencil.svg");
+    mask-image: url("../SVG/pencil.svg");
+}
+.icon-trash:before {
+    -webkit-mask-image: url("../SVG/trash.svg");
+    mask-image: url("../SVG/trash.svg");
+}
+
+.icon-eye:before {
+    -webkit-mask-image: url("../SVG/eye.svg");
+    mask-image: url("../SVG/eye.svg");
+}
+
+/* --- Status Dropdown --- */
+.om-status-dropdown {
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1.5px solid var(--input-border);
+    background: var(--input-bg);
+    font-size: 1rem;
+    min-width: 120px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.om-status-dropdown:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px #648de533;
+}
+
+/* --- Action Buttons --- */
+.om-action-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-right: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    transition: background 0.2s;
+}
+.om-action-btn:last-child { margin-right: 0; }
+.om-action-edit { background: #7da1d1; color: #fff; }
+.om-action-edit:hover { background: #648DE5; }
+.om-action-delete { background: #e74c3c; color: #fff; }
+.om-action-delete:hover { background: #c0392b; }
+.om-action-view { background: #FF914D; color: #fff; }
+.om-action-view:hover { background: #E67E3D; }
+.icon-container {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1100px) {
+    .order-management-content { margin-left: 20px !important; padding-left: 8px; padding-right: 8px; }
+    .side_bar.expanded ~ .order-management-content { margin-left: 60px !important; }
+    .order-management-table { min-width: 700px; }
+}
+@media (max-width: 900px) {
+    .order-management-content { margin-left: 0 !important; padding-left: 8px; padding-right: 8px; }
+    .order-management-table { min-width: 600px; }
+    .order-management-table th, .order-management-table td { padding: 8px; font-size: 0.95rem; }
+}
+@media (max-width: 600px) {
+    .order-management-controls { flex-direction: column; align-items: stretch; gap: 10px; }
+    .order-management-table-container { border-radius: 0; box-shadow: none; }
+    .order-management-table th, .order-management-table td { padding: 6px; font-size: 0.9rem; }
+}
+
+.order-management-content {
+    margin-left: 22px;
+    margin-top: 90px;
+    transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
+    padding: 0 32px 0 12px;
+}
+.side_bar.expanded ~ .order-management-content {
+    margin-left: 260px;
+}
