@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="../CSS/searchComponent.css">
+</head>
+<body>
+    <div class="search-module">
+        <div class="search-bar-row">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+            <button class="settings-btn" id="settingsBtn" title="Filter & Sort">
+                <i class="fa fa-sliders-h"></i>
+            </button>
+        </div>
+        <div class="filter-modal" id="filterModal" style="display:none;">
+            <div class="filter-modal-content">
+                <div class="modal-header">
+                    <span class="modal-title">Sort & Filter</span>
+                    <button class="close-modal" id="closeModalBtn">&times;</button>
+                </div>
+                <div class="modal-section">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by" class="sort-select">
+                        <option value="relevant">Relevant</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+                <hr>
+                <div class="modal-section">
+                    <label>Price Range:</label>
+                    <div class="price-range-row">
+                        <input type="number" id="modal-min-price" class="price-box" placeholder="Minimum" min="0">
+                        <span class="price-separator">-</span>
+                        <input type="number" id="modal-max-price" class="price-box" placeholder="Maximum" min="0" max="999999">
+                    </div>
+                </div>
+                <hr>
+                <div class="modal-section">
+                    <label>Categories:</label>
+                    <div class="category-columns">
+                        <div class="category-col">
+                            <label for="modal-cat-cookware" class="category-label">Cookware <input type="checkbox" id="modal-cat-cookware" name="category" value="Cookware"></label>
+                            <div class="subcategory-group">
+                                <label for="modal-sub-pots">Pots & Pans <input type="checkbox" id="modal-sub-pots" name="subcategory" value="Pots & Pans"></label>
+                                <label for="modal-sub-sets">Cookware Sets <input type="checkbox" id="modal-sub-sets" name="subcategory" value="Cookware Sets"></label>
+                                <label for="modal-sub-specialty">Specialty Cookware <input type="checkbox" id="modal-sub-specialty" name="subcategory" value="Specialty Cookware"></label>
+                            </div>
+                        </div>
+                        <div class="category-col">
+                            <label for="modal-cat-tools" class="category-label">Kitchen Tools & Utensils <input type="checkbox" id="modal-cat-tools" name="category" value="Kitchen Tools & Utensils"></label>
+                            <div class="subcategory-group">
+                                <label for="modal-sub-cutting">Cutting Tools <input type="checkbox" id="modal-sub-cutting" name="subcategory" value="Cutting Tools"></label>
+                                <label for="modal-sub-cooking">Cooking Utensils <input type="checkbox" id="modal-sub-cooking" name="subcategory" value="Cooking Utensils"></label>
+                                <label for="modal-sub-prep">Preparation Tools <input type="checkbox" id="modal-sub-prep" name="subcategory" value="Preparation Tools"></label>
+                            </div>
+                        </div>
+                        <div class="category-col">
+                            <label for="modal-cat-tableware" class="category-label">Tableware & Serving <input type="checkbox" id="modal-cat-tableware" name="category" value="Tableware & Serving"></label>
+                            <div class="subcategory-group">
+                                <label for="modal-sub-plates">Plates & Bowls <input type="checkbox" id="modal-sub-plates" name="subcategory" value="Plates & Bowls"></label>
+                                <label for="modal-sub-drinkware">Drinkware <input type="checkbox" id="modal-sub-drinkware" name="subcategory" value="Drinkware"></label>
+                                <label for="modal-sub-serving">Serving Tools <input type="checkbox" id="modal-sub-serving" name="subcategory" value="Serving Tools"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="apply-filter-btn">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script>
+        const settingsBtn = document.getElementById('settingsBtn');
+        const filterModal = document.getElementById('filterModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        settingsBtn.onclick = () => {
+            filterModal.style.display = 'block';
+        };
+        closeModalBtn.onclick = () => {
+            filterModal.style.display = 'none';
+        };
+        window.onclick = function(event) {
+            if (event.target === filterModal) {
+                filterModal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
